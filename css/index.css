@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+/* Working branch and if you have connect to the internet*/
 body {
   margin: 0;
   padding: 0;
@@ -67,32 +68,36 @@ body {
   display: inline-block;
   margin-top: 16px;
   margin-left: 40px;
-  background-color: #8d9397;
+  background-color: #BABABA;
   width: 1270px;
   height: 390px;
   border-radius: 4px;
+  /*Если slider-block: mg:left:0; тогда 
+        высота нормально, но блок сдвигаеться
+      */
+
 }
-.header .slider-in-header .bg-slider .text-slider {
+.header .slider-in-header .bg-slider .left-column-slider {
   font-family: monospace;
   font-weight: bold;
-  margin-top: 150px;
-  margin-left: 84px;
+  padding-top: 150px;
+  padding-left: 84px;
   width: 500px;
+  height: 240px;
   float: left;
-  height: 100%;
 }
-.header .slider-in-header .bg-slider .text-slider .top-text {
+.header .slider-in-header .bg-slider .left-column-slider .top-text {
   color: #40444a;
 }
-.header .slider-in-header .bg-slider .text-slider .center-text {
+.header .slider-in-header .bg-slider .left-column-slider .center-text {
   color: #2e2e2e;
   font-size: 40px;
   font-style: italic;
 }
-.header .slider-in-header .bg-slider .text-slider .bottom-text {
+.header .slider-in-header .bg-slider .left-column-slider .bottom-text {
   color: #7d818c;
 }
-.header .slider-in-header .bg-slider .text-slider a {
+.header .slider-in-header .bg-slider .left-column-slider a {
   display: inline-block;
   margin-top: 40px;
   width: 110px;
@@ -100,7 +105,7 @@ body {
   border-radius: 4px;
   text-decoration: none;
 }
-.header .slider-in-header .bg-slider .text-slider .read-more {
+.header .slider-in-header .bg-slider .left-column-slider .read-more {
   background: -webkit-linear-gradient(bottom, #829bbd 30%, #c3d2e6 99%);
   border: 1px solid #899db8;
   text-align: center;
@@ -108,19 +113,59 @@ body {
   color: white;
   text-shadow: 2px 2px 2px #829bbd;
 }
-.header .slider-in-header .bg-slider .text-slider .portfolio {
+.header .slider-in-header .bg-slider .left-column-slider .portfolio {
   background: #e8eaf0;
   text-align: center;
   line-height: 30px;
   color: #95a1af;
   border: 1px solid #a8aebd;
 }
-.header .slider-in-header .bg-slider .slider-content {
-  margin-top: 30px;
-  margin-left: 140px;
+.header .slider-in-header .bg-slider .right-column-slider {
+  float: left;
+  margin-left: 100px;
+  position: relative;
+  width: 480px;
+  height: 325px;
+  border-radius: 5px;
 }
-.header .slider-in-header .bg-slider .slider-carret {
-  margin-left: 250px;
+.header .slider-in-header .bg-slider .right-column-slider .slider-block {
+  margin-top: 10px;
+  padding: 0px;
+}
+.header .slider-in-header .bg-slider .right-column-slider .slider-block li {
+  position: absolute;
+  list-style: none;
+  float: left;
+  opacity: 0;
+  margin-top: 20px;
+}
+.header .slider-in-header .bg-slider .right-column-slider .slider-block li img {
+  width: 480px;
+  height: 310px;
+  border-radius: 2px;
+}
+.header .slider-in-header .bg-slider .right-column-slider .slider-block li:nth-child(1) {
+  opacity: 1;
+}
+.header .slider-in-header .bg-slider .right-column-slider .carSlider {
+  position: absolute;
+  margin: 340px 200px;
+  width: 200px;
+}
+.header .slider-in-header .bg-slider .right-column-slider .carSlider input[type="radio"] {
+  position: relative;
+  opacity: 0;
+  z-index: 9999;
+  display: none;
+}
+.header .slider-in-header .bg-slider .right-column-slider .carSlider input[type="radio"]:not(checked) + label {
+  cursor: pointer;
+  padding-left: 15px;
+  background: url("../images/slider-carret.png") no-repeat -21px 0px;
+}
+.header .slider-in-header .bg-slider .right-column-slider .carSlider input[type="radio"]:checked + label {
+  padding-left: 15px;
+  background: url("../images/slider-carret.png") no-repeat -1px 0;
 }
 main .popup {
   height: 433px;

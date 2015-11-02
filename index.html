@@ -4,10 +4,11 @@
 	<title>Brand Media</title>
 	<meta charset="utf-8">
 	<!--<link rel="stylesheet/less" href="css/index.less">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-	-->
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/font-awesome.css"
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>-->
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/index.js"></script>
 </head>
 <body>
 	<!-- begin header-->
@@ -35,16 +36,24 @@
 		<!--begin slider -->
 		<div class="slider-in-header">
 			<div class="bg-slider">
-				<div class="text-slider">
+				<div class="left-column-slider">
 					<span class="top-text">Creative Agency</span><br>
 					<span class="center-text">We Make Dreams</span><br>
 					<span class="bottom-text">Beatiful interface and creative solutions</span><br>
 					<a class="read-more" href="#">Read More</a>
 					<a class="portfolio" href="#">Portfolio</a>
 				</div>
-				<div class="slider">
-					<img class="slider-content" src="images/slider-img.png" alt="slider">
-					<img class="slider-carret" src="images/slider-carret.png" alt="slider">
+				<div class="right-column-slider">
+					<ul class="slider-block" data-current=0>
+						<li><img src="images/slide1.png"></li>
+						<li><img src="images/slide2.jpg"></li>
+						<li><img src="images/slide3.jpg"></li>
+					</ul>
+					<div class="carSlider" id="carSlider">
+						<input type="radio" name="itemCarSlider" id="0" checked class="firstItemCar"><label for="0"></label>
+						<input type="radio" name="itemCarSlider" id="1" class="secondItemCar"><label for="1"></label>
+						<input type="radio" name="itemCarSlider" id="2" class="threeItemCar"><label for="2"></label>
+					</div>
 				</div>
 			</div>
 		</div>
