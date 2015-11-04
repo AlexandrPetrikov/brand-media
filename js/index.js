@@ -31,5 +31,16 @@ function nextSlide(){
 
 };
 /*----------------end slider ---------------------*/
+/*-----------------start tab-s code*/
 
+$(".top-menu-tab").on("click", currentTab);
+
+function currentTab(){
+	var k = $(this).index();
+	$(this).addClass("chooseTab").siblings().removeClass("chooseTab");
+	$(".tab-content").removeClass("showTab").eq(k).addClass("showTab");
+}
+
+
+/*-----------------end tab-s code*/
 });

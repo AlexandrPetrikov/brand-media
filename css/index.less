@@ -28,7 +28,13 @@ body{
 				top:20px;
 				font-size:22px;
 				display:inline-block;
-				color:rgb(228,231,233);
+				a{
+					color:rgb(228,231,233);
+					text-decoration: none;
+					&:hover{
+						color:#FF7474;
+					}
+				}
 			}
 			span{
 				position: absolute;
@@ -55,6 +61,9 @@ body{
 						a{
 							color:rgb(255,255,255);
 							text-decoration: none;
+							&:hover{
+								color:#FFF633
+							}
 						}
 				}
 			}
@@ -178,92 +187,95 @@ body{
 
 }
 main{
-	.popup{
+	.tabs{
 		height: 433px;
 		padding-top: 40px;
 		padding-left: 27px;
-		.popup-menu{
+		.tabs-menu{
 			display: inline-block;
 			width: 1300px;
 			ul{
+				margin-top:0;
 				background: #c2c6cc;
-				li{
+				.top-menu-tab{	
+					cursor:pointer;
+					background: #c2c6cc;
+					margin-left: -4px;
+					padding:5px 20px;
 					display: inline-block;
-					a{
-						background: #c2c6cc;
-						margin-left: -4px;
-						padding:5px 20px;
-						display: inline-block;
-						height:62px;
-						color:white;
-						text-decoration: none;
-					}
-					.big-text-popup{
+					height:62px;
+					color:white;
+					.big-text-tab{
 						font-size: 25px;
 					}
 				}
 				li:first-child{
-					margin-left: -36px;
-					a{
-						background: #26272c;
-					}
+					margin-left: -40px;
 				} 
+				.chooseTab{
+					background: #26272c;
+				}
 			}
-
 		}
-		.left-column{
-			width:800px;
-			float: left;
-			.top-text{
-				color: #7f8792;
+		.tab-content{
+			display: none;
+			.left-column{
+				width:800px;
+				float: left;
+				.top-text{
+					color: #7f8792;
+				}
+				.bottom-text{
+					color: #666e78;
+				}
+				.social{
+					height:50px;
+					margin-top: 30px;	
+					line-height: 40px;
+					a{
+						text-decoration: none;
+						color:white;
+						margin-left: 40px;
+						padding:5px 20px;
+						border-radius: 4px;
+					}
+					.read-more{
+						background: #4f5562;
+					}
+					.social-tw{
+						background: #547d9b;
+					}
+					.social-fb{
+						background: #435785;
+					}
+				}	
 			}
-			.bottom-text{
-				color: #666e78;
-			}
-			.social{
-				height:50px;
-				margin-top: 30px;	
-				line-height: 40px;
-				a{
-					text-decoration: none;
-					color:white;
-					margin-left: 40px;
+			.right-column{
+				float: right;
+				width: 500px;
+				img{
+					width: 400px;
+					height:200px;
+					float: right;
+				}
+				.get-in-touch{
+					display: inline-block;
+					float: right;
+					margin-top: 10px;
 					padding:5px 20px;
 					border-radius: 4px;
-				}
-				.read-more{
+					border:none;
 					background: #4f5562;
-				}
-				.social-tw{
-					background: #547d9b;
-				}
-				.social-fb{
-					background: #435785;
-				}
-			}	
-		}
-		.right-column{
-			float: right;
-			width: 500px;
-			img{
-				width: 400px;
-				height:200px;
-				float: right;
-			}
-			.get-in-touch{
-				display: inline-block;
-				float: right;
-				margin-top: 10px;
-				padding:5px 20px;
-				border-radius: 4px;
-				border:none;
-				background: #4f5562;
-				color:white;
-				font-weight:bolder;
-				font-size: 15px;
-				text-decoration: none;
+					color:white;
+					font-weight:bolder;
+					font-size: 15px;
+					text-decoration: none;
 
+				}
 			}
+		}
+		.showTab{
+				display: inline-block;
 		}
 	}
 	.brandmedia-more{

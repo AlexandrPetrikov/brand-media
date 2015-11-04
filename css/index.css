@@ -29,7 +29,13 @@ body {
   top: 20px;
   font-size: 22px;
   display: inline-block;
+}
+.header .header-menu .site-logo h1 a {
   color: #e4e7e9;
+  text-decoration: none;
+}
+.header .header-menu .site-logo h1 a:hover {
+  color: #FF7474;
 }
 .header .header-menu .site-logo span {
   position: absolute;
@@ -58,6 +64,9 @@ body {
 .header .header-menu nav ul li a {
   color: #ffffff;
   text-decoration: none;
+}
+.header .header-menu nav ul li a:hover {
+  color: #fff633;
 }
 .header .slider-in-header {
   background: #25272b;
@@ -167,80 +176,81 @@ body {
   padding-left: 15px;
   background: url("../images/slider-carret.png") no-repeat -1px 0;
 }
-main .popup {
+main .tabs {
   height: 433px;
   padding-top: 40px;
   padding-left: 27px;
 }
-main .popup .popup-menu {
+main .tabs .tabs-menu {
   display: inline-block;
   width: 1300px;
 }
-main .popup .popup-menu ul {
+main .tabs .tabs-menu ul {
+  margin-top: 0;
   background: #c2c6cc;
 }
-main .popup .popup-menu ul li {
-  display: inline-block;
-}
-main .popup .popup-menu ul li a {
+main .tabs .tabs-menu ul .top-menu-tab {
+  cursor: pointer;
   background: #c2c6cc;
   margin-left: -4px;
   padding: 5px 20px;
   display: inline-block;
   height: 62px;
   color: white;
-  text-decoration: none;
 }
-main .popup .popup-menu ul li .big-text-popup {
+main .tabs .tabs-menu ul .top-menu-tab .big-text-tab {
   font-size: 25px;
 }
-main .popup .popup-menu ul li:first-child {
-  margin-left: -36px;
+main .tabs .tabs-menu ul li:first-child {
+  margin-left: -40px;
 }
-main .popup .popup-menu ul li:first-child a {
+main .tabs .tabs-menu ul .chooseTab {
   background: #26272c;
 }
-main .popup .left-column {
+main .tabs .tab-content {
+  display: none;
+}
+main .tabs .tab-content .left-column {
   width: 800px;
   float: left;
 }
-main .popup .left-column .top-text {
+main .tabs .tab-content .left-column .top-text {
   color: #7f8792;
 }
-main .popup .left-column .bottom-text {
+main .tabs .tab-content .left-column .bottom-text {
   color: #666e78;
 }
-main .popup .left-column .social {
+main .tabs .tab-content .left-column .social {
   height: 50px;
   margin-top: 30px;
   line-height: 40px;
 }
-main .popup .left-column .social a {
+main .tabs .tab-content .left-column .social a {
   text-decoration: none;
   color: white;
   margin-left: 40px;
   padding: 5px 20px;
   border-radius: 4px;
 }
-main .popup .left-column .social .read-more {
+main .tabs .tab-content .left-column .social .read-more {
   background: #4f5562;
 }
-main .popup .left-column .social .social-tw {
+main .tabs .tab-content .left-column .social .social-tw {
   background: #547d9b;
 }
-main .popup .left-column .social .social-fb {
+main .tabs .tab-content .left-column .social .social-fb {
   background: #435785;
 }
-main .popup .right-column {
+main .tabs .tab-content .right-column {
   float: right;
   width: 500px;
 }
-main .popup .right-column img {
+main .tabs .tab-content .right-column img {
   width: 400px;
   height: 200px;
   float: right;
 }
-main .popup .right-column .get-in-touch {
+main .tabs .tab-content .right-column .get-in-touch {
   display: inline-block;
   float: right;
   margin-top: 10px;
@@ -252,6 +262,9 @@ main .popup .right-column .get-in-touch {
   font-weight: bolder;
   font-size: 15px;
   text-decoration: none;
+}
+main .tabs .showTab {
+  display: inline-block;
 }
 main .brandmedia-more {
   background: #26272a;
